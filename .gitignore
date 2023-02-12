@@ -11,6 +11,7 @@ install/
 
 # files
 *.DS_Store
+Gemfile.lock
 
 # visual studio
 *.aps
