@@ -1,0 +1,13 @@
+# Copyright (c) 2025 Zach Metcalf. All Rights Reserved.
+
+---
+Checks: >
+  -*,
+  clang-analyzer-*,
+  bugprone-*,
+  performance-*,
+  modernize-*
+
+WarningsAsErrors: ''
+HeaderFilterRegex: '.*'
+FormatStyle: none
