@@ -9,5 +9,5 @@ Checks: >
   performance-*
 
 WarningsAsErrors: ''
-HeaderFilterRegex: '^(?!.*(3rdparty|vcpkg_installed)).*'
+HeaderFilterRegex: '^(?!.*3rdparty).*'
 FormatStyle: none
