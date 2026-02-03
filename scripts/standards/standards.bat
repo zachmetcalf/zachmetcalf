@@ -10,7 +10,7 @@ if "%~1"=="" (
 
 set cwd=%~dp0
 set projectdir=%~1
-set standardsdir=%cwd%..
+set standardsdir=%cwd%..\..
 
 if not exist "%projectdir%\.vscode" (
 	mkdir "%projectdir%\.vscode"
