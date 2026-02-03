@@ -3,35 +3,25 @@
 @echo off
 title standards
 
+if "%~1"=="" (
+	echo usage: standards.bat ^<projectdir^>
+	exit /b 1
+)
+
 set cwd=%~dp0
-set projectdir=%cwd%..\..
-set tempdir=%projectdir%\.standards
+set projectdir=%~1
+set standardsdir=%cwd%..
 
-if exist %tempdir% (
-	rmdir /s /q %tempdir%
+if not exist "%projectdir%\.vscode" (
+	mkdir "%projectdir%\.vscode"
 )
 
-mkdir %tempdir%
-
-pushd %tempdir%
-
-git clone --branch main https://github.com/zachmetcalf/zachmetcalf .
-
-popd
-
-if not exist %projectdir%\.vscode (
-	mkdir %projectdir%\.vscode
-)
-
-copy /y %tempdir%\.vscode\settings.json %projectdir%\.vscode\settings.json >nul
-copy /y %tempdir%\.vscode\tasks.json %projectdir%\.vscode\tasks.json >nul
-copy /y %tempdir%\.clang-tidy %projectdir%\.clang-tidy >nul
-copy /y %tempdir%\.editorconfig %projectdir%\.editorconfig >nul
-copy /y %tempdir%\.gitattributes %projectdir%\.gitattributes >nul
-copy /y %tempdir%\.gitignore %projectdir%\.gitignore >nul
-copy /y %tempdir%\license.txt %projectdir%\license.txt >nul
-
-rmdir /s /q %tempdir%
+copy /y "%standardsdir%\.vscode\settings.json" "%projectdir%\.vscode\settings.json" >nul
+copy /y "%standardsdir%\.clang-tidy" "%projectdir%\.clang-tidy" >nul
+copy /y "%standardsdir%\.editorconfig" "%projectdir%\.editorconfig" >nul
+copy /y "%standardsdir%\.gitattributes" "%projectdir%\.gitattributes" >nul
+copy /y "%standardsdir%\.gitignore" "%projectdir%\.gitignore" >nul
+copy /y "%standardsdir%\license.txt" "%projectdir%\license.txt" >nul
 
 echo standards completed
 exit /b 0
