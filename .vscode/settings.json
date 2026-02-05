@@ -1,7 +1,10 @@
 {
+	"C_Cpp.autocomplete": "disabled",
 	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
 	"C_Cpp.codeAnalysis.runAutomatically": true,
 	"C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+	"C_Cpp.errorSquiggles": "disabled",
+	"C_Cpp.intelliSenseEngine": "disabled",
 	"cmake.configureOnEdit": false,
 	"cmake.configureOnOpen": false,
 	"cmake.environment": {
