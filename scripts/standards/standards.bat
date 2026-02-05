@@ -17,8 +17,8 @@ if not exist "%projectdir%\.vscode" (
 )
 
 copy /y "%standardsdir%\.vscode\settings.json" "%projectdir%\.vscode\settings.json" >nul
+copy /y "%standardsdir%\.vscode\tasks.json" "%projectdir%\.vscode\tasks.json" >nul
 copy /y "%standardsdir%\.clang-tidy" "%projectdir%\.clang-tidy" >nul
-copy /y "%standardsdir%\.clangd" "%projectdir%\.clangd" >nul
 copy /y "%standardsdir%\.editorconfig" "%projectdir%\.editorconfig" >nul
 copy /y "%standardsdir%\.gitattributes" "%projectdir%\.gitattributes" >nul
 copy /y "%standardsdir%\.gitignore" "%projectdir%\.gitignore" >nul
