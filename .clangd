@@ -13,6 +13,6 @@ Diagnostics:
 ---
 
 If:
-  PathMatch: .*/source/.*
+  PathMatch: .*[\\/]+source[\\/].*
 Diagnostics:
   Suppress: false
