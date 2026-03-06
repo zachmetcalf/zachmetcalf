@@ -23,6 +23,7 @@
         "install/": true
     },
     "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
     "search.exclude": {
         "bin/": true,
         "build/": true,
