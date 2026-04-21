@@ -4,6 +4,7 @@
 bin/
 build/
 install/
+temp/
 
 # files
 Gemfile.lock
