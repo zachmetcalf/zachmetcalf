@@ -16,6 +16,7 @@ if not exist "%projectdir%\.vscode" (
 	mkdir "%projectdir%\.vscode"
 )
 
+copy /y "%standardsdir%\.vscode\preferences.json" "%projectdir%\.vscode\preferences.json" >nul
 copy /y "%standardsdir%\.vscode\settings.json" "%projectdir%\.vscode\settings.json" >nul
 copy /y "%standardsdir%\.clang-tidy" "%projectdir%\.clang-tidy" >nul
 copy /y "%standardsdir%\.editorconfig" "%projectdir%\.editorconfig" >nul
