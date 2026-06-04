@@ -12,10 +12,15 @@ set cwd=%~dp0
 set projectdir=%~1
 set standardsdir=%cwd%..\..
 
+if not exist "%projectdir%\.github\workflows" (
+	mkdir "%projectdir%\.github\workflows"
+)
+
 if not exist "%projectdir%\.vscode" (
 	mkdir "%projectdir%\.vscode"
 )
 
+copy /y "%standardsdir%\.github\workflows\secrets.yml" "%projectdir%\.github\workflows\secrets.yml" >nul
 copy /y "%standardsdir%\.vscode\preferences.json" "%projectdir%\.vscode\preferences.json" >nul
 copy /y "%standardsdir%\.vscode\settings.json" "%projectdir%\.vscode\settings.json" >nul
 copy /y "%standardsdir%\.clang-tidy" "%projectdir%\.clang-tidy" >nul
